@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 
 const config = require('./config');
 const loader = require('./loader');
@@ -6,6 +7,7 @@ const loader = require('./loader');
 function serverBootstrap() {
     
     const app = express();
+    app.use(cors());
     const server = app.listen(config.server.port);
 
     server.on('error', onError);
