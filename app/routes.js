@@ -6,7 +6,10 @@ const controller = require('./controllers');
 router.route('/')
 .get(controller.getHTML)
 
-router.route('/api')
+router.route('/api/timestamp')
+.get(controller.test)
+
+router.route('/api/test')
 .get(controller.test)
 
 
