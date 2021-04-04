@@ -25,7 +25,7 @@ function handleTimestamp(req, res) {
                     error: "Invalid Date"
                 }
                 res
-                .writeHead(400, {"Content-Type": "application/json"})
+                .writeHead(200, {"Content-Type": "application/json"})
                 .end(JSON.stringify(timestamp));
             }
         }
