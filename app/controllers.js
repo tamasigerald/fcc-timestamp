@@ -7,15 +7,15 @@ const getTimestamp = date => ({
 });
 
 function handleTimestamp(req, res) {
-    const string = req.params.date;
+    const date_string = req.params.date;
     let timestamp;
     try {
-        if (string === undefined || string.trim() === '') {
+        if (date_string === undefined || date_string.trim() === '') {
             timestamp = getTimestamp(new Date());
             res.status(200).json(timestamp);
         }
         else {
-            const date = !isNaN(string) ? new Date(parseInt(string)) : new Date(string);
+            const date = !isNaN(date_string) ? new Date(parseInt(date_string)) : new Date(date_string);
             if (!isNaN(date.getTime())) {
                 timestamp = getTimestamp(date);
                 res.status(200).json(timestamp);
