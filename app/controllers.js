@@ -22,7 +22,7 @@ function handleTimestamp(req, res) {
             }
             else {
                 timestamp = {
-                    error: "Invalid date"
+                    error: "Invalid Date"
                 }
                 res.status(400).json(timestamp);
             }
