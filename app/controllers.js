@@ -7,7 +7,7 @@ const getTimestamp = date => ({
 });
 
 function handleTimestamp(req, res) {
-    const string = req.params.string;
+    const string = req.params.date;
     let timestamp;
     try {
         if (string === undefined || string.trim() === '') {
@@ -22,7 +22,7 @@ function handleTimestamp(req, res) {
             }
             else {
                 timestamp = {
-                    message: "Invalid date!"
+                    message: "Invalid date"
                 }
                 res.status(400).json(timestamp);
             }
